@@ -66,11 +66,21 @@ nav {
 @media(min-width:600px){   
    .slidebar ,.fa-bars {
        display: none;
-   } 
+   }
+   
+   .about {
+       h4 {
+           width: 100rem;
+           display: flex;
+           justify-content: flex-end; 
+           padding-bottom: 6rem;
+           padding-left: 5rem;
+       }              
+   }
    
    a:hover {
             color: #34cceb;
-        }     
+        }
 }
 
 nav ul {
@@ -97,41 +107,6 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 10px;
-}
-
-.container {
-    height: 90vh;
-    width: 100%;
-    padding-left: 2rem;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    z-index: 999;     
-    
-    .Video {
-        position: relative;
-        object-fit: Cover;
-        position: Absolute;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -10;
-    }  
-    
-    button {
-        width:15rem;
-        padding: 10px 10px;
-        color: white;
-        background-color:transparent; 
-        border: 2px solid skyblue;
-        border-radius: 4px;
-    } 
-    
-    p {
-        font-size: 2rem;
-        color: white;
-        padding-bottom: 1rem;
-    }       
 }
 
 .sidebar {    
@@ -178,6 +153,61 @@ footer {
     }       
 }
 
+.purchase {
+    height: 100vh;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;    
+    background-image:url("img2.png");
+    background-size: cover;
+    
+    .ele1 {
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        flex-direction: column; 
+        padding: 4rem; 
+        
+        button {
+            margin-top: 5px;
+            padding: 8px 5rem;            
+            border: none;
+            border-radius: 4px;
+            background-color: #eb7d34;
+            color: white;
+        }
+        
+        select {
+            margin: 5px;
+            padding: 8px;
+            width: 14.1rem;
+            border: none;
+            border-radius: 4px;
+            background-color: #34cceb;
+        }               
+    }
+    
+    .ele2 {
+        text-align: center; 
+        color: white;
+        
+        h4 {
+            padding: 1rem;           
+        }
+        
+        .ele3 {
+            width: 20rem;
+            border-top:5px solid #34cceb;
+            border-radius: 1rem;
+            
+            p {
+               padding: 10px 0;
+               font-size: 15px; 
+            }
+        }
+    }
+}
+
 @media(max-width:600px){
     .logo {
         padding-right: 3rem;
@@ -187,7 +217,11 @@ footer {
         ul {
             display: none;
         }
-    }                      
+    }
+    
+    .purchase {
+        flex-direction: column; 
+    }                    
 }
     </style>
 </head>
@@ -199,12 +233,12 @@ footer {
         </div>
        <div class="items">
            <ul>
-                <li><a class="close" href="about.html">About <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
+                <li><a class="close" href="#">About <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
                 <li><a class="close" href="#">Media <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
                 <li><a class="close" href="#">News <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
-                <li><a class="close" href="purchase.html">Purchase <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
+                <li><a class="close" href="#">Purchase <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
                 <li><a class="close" href="#">Social Media <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
-                <li><a class="close" href="contact.html">Contact Us <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
+                <li><a class="close" href="#">Contact Us <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
             </ul>
        </div>
     </div>
@@ -215,31 +249,39 @@ footer {
         </div>
         <nav>            
             <ul>
-                <li><a class="close" href="about.html">About</a></li>
+                <li><a class="close" href="#">About</a></li>
                 <li><a class="close" href="#">Media</a></li>
                 <li><a class="close" href="#">News</a></li>
-                <li><a class="close" href="purchase.html">Purchase</a></li>
+                <li><a class="close" href="#">Purchase</a></li>
                 <li><a class="close" href="#">Social Media</a></li>
-                <li><a class="close" href="contact.html">Contact Us</a></li>
+                <li><a class="close" href="#">Contact Us</a></li>
             </ul>
             <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
         </nav>      
     </header>
         
     <main>
-        <!-- Main content goes here -->
-        <div class="container">
-           <p>Built by developers.
-<br>
-For developers.
-<br>
-With fair terms for all.
-<br>
-Let's build incredible things together.
-           </p>
-           <button>LEARN MORE ABOUT US</button>
-           <video src="myGameVideo.mp4" class="Video" muted loop autoplay>myGameVideo</video> 
-        </div>                
+        <!-- Main content goes here -->                       
+        <div class="purchase">
+           <div class="ele1">
+              <select name="INDIA" id="country">
+              <option value="INDIA"> INDIA </option>
+              </select>
+              <select name="STREAM" id="stream">
+              <option value="STREAM"> STREAM </option>
+              </select>
+              <select name="DIGITAL EDITION" id="country">
+              <option value="DIGITAL EDITION"> DIGITAL EDITION </option>
+              </select>
+              <button>PURCHASE</button>
+           </div>
+           <div class="ele2">
+              <h4>DIGITAL EDITION</h4>
+              <div class="ele3">
+                <p>TONY HAWKS<sup>TM</sup> PRO SKATER<sup>TM</sup> 1 + 2 GAME</p>
+              </div>
+           </div>
+        <div>        
     </main>
 
     <footer>

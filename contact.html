@@ -59,18 +59,28 @@ nav {
         position: relative;                          
         padding: 5px 8px; 
         border: 2px solid white;
-        border-radius: 4px;              
+        border-radius: 4px;                     
     }        
 }
 
 @media(min-width:600px){   
    .slidebar ,.fa-bars {
        display: none;
-   } 
+   }
+   
+   .about {
+       h4 {
+           width: 100rem;
+           display: flex;
+           justify-content: flex-end; 
+           padding-bottom: 6rem;
+           padding-left: 5rem;
+       }              
+   }
    
    a:hover {
             color: #34cceb;
-        }     
+        }
 }
 
 nav ul {
@@ -97,41 +107,6 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 10px;
-}
-
-.container {
-    height: 90vh;
-    width: 100%;
-    padding-left: 2rem;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    z-index: 999;     
-    
-    .Video {
-        position: relative;
-        object-fit: Cover;
-        position: Absolute;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -10;
-    }  
-    
-    button {
-        width:15rem;
-        padding: 10px 10px;
-        color: white;
-        background-color:transparent; 
-        border: 2px solid skyblue;
-        border-radius: 4px;
-    } 
-    
-    p {
-        font-size: 2rem;
-        color: white;
-        padding-bottom: 1rem;
-    }       
 }
 
 .sidebar {    
@@ -178,6 +153,64 @@ footer {
     }       
 }
 
+.contact {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    
+    .ele1 {
+        height: 60vh;
+        width: 100%;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;  
+        background-image:url("imag3");
+        background-size: cover;
+        
+        button {          
+            margin: 1rem;
+            margin-right: 6rem;
+            padding: 5px 20px;
+            border: none;
+            background-color: black;
+            color: white; 
+            border-radius: 4px;
+        }
+    }
+    
+    .ele2 {
+        height: 40vh;
+        width: 100%;
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;                
+        background-color: black;
+        color: white;
+        
+        h4 {
+            margin: 1rem;
+        }
+        
+        ul {
+           list-style-type: none;
+           display: flex; 
+           gap: 1rem;
+           
+           i {
+               margin-left: 4rem;
+           }
+        }
+        
+        a {            
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
 @media(max-width:600px){
     .logo {
         padding-right: 3rem;
@@ -187,7 +220,7 @@ footer {
         ul {
             display: none;
         }
-    }                      
+    }                  
 }
     </style>
 </head>
@@ -199,12 +232,12 @@ footer {
         </div>
        <div class="items">
            <ul>
-                <li><a class="close" href="about.html">About <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
+                <li><a class="close" href="#">About <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
                 <li><a class="close" href="#">Media <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
                 <li><a class="close" href="#">News <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
-                <li><a class="close" href="purchase.html">Purchase <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
+                <li><a class="close" href="#">Purchase <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
                 <li><a class="close" href="#">Social Media <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
-                <li><a class="close" href="contact.html">Contact Us <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
+                <li><a class="close" href="#">Contact Us <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
             </ul>
        </div>
     </div>
@@ -215,31 +248,36 @@ footer {
         </div>
         <nav>            
             <ul>
-                <li><a class="close" href="about.html">About</a></li>
+                <li><a class="close" href="#">About</a></li>
                 <li><a class="close" href="#">Media</a></li>
                 <li><a class="close" href="#">News</a></li>
-                <li><a class="close" href="purchase.html">Purchase</a></li>
+                <li><a class="close" href="#">Purchase</a></li>
                 <li><a class="close" href="#">Social Media</a></li>
-                <li><a class="close" href="contact.html">Contact Us</a></li>
+                <li><a class="close" href="#">Contact Us</a></li>
             </ul>
             <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
         </nav>      
     </header>
         
     <main>
-        <!-- Main content goes here -->
-        <div class="container">
-           <p>Built by developers.
-<br>
-For developers.
-<br>
-With fair terms for all.
-<br>
-Let's build incredible things together.
-           </p>
-           <button>LEARN MORE ABOUT US</button>
-           <video src="myGameVideo.mp4" class="Video" muted loop autoplay>myGameVideo</video> 
-        </div>                
+        <!-- Main content goes here -->                       
+        <div class="contact">
+           <div class="ele1">
+              <h4>Join The Community</h4>
+              <button>Join</button>
+           </div>
+           <div class="ele2">
+             <h4>Skater</h4>
+             <ul>
+               <li>
+                 <a href="index.html">Home</a>
+               <li>
+               <li>FAQ</li>
+               <li><i class="fa-brands fa-facebook"></i></li>
+               <li><i class="fa-brands fa-discord"></i></li>
+            </ul> 
+           </div>
+        <div>
     </main>
 
     <footer>
