@@ -70,7 +70,15 @@ nav {
    
    a:hover {
             color: #34cceb;
-        }     
+        } 
+
+    .panel1 {
+         ul{
+           display: flex; 
+           justify-content: space-evenly;
+           gap: 2rem; 
+         }
+    }
 }
 
 nav ul {
@@ -112,7 +120,9 @@ footer {
         position: relative;
         object-fit: Cover;
         position: Absolute;
-        left: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;        
         width: 100%;
         height: 100%;
         z-index: -10;
@@ -178,6 +188,36 @@ footer {
     }       
 }
 
+.panel {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 15rem;    
+    color: white;
+    background-color: #222f3d;
+    
+    .panel1 {             
+        padding: 1rem;
+    }
+    
+    ul {        
+        list-style-type: none;
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        i {
+            padding: 2px 10px;
+        }
+        
+        p {
+            padding-left: 30px;
+        }
+    }
+}
+
 @media(max-width:600px){
     .logo {
         padding-right: 3rem;
@@ -187,7 +227,11 @@ footer {
         ul {
             display: none;
         }
-    }                      
+    } 
+
+    .panel {
+        flex-direction: column; 
+    }
 }
     </style>
 </head>
@@ -241,6 +285,25 @@ Let's build incredible things together.
            <video src="myGameVideo.mp4" class="Video" muted loop autoplay>myGameVideo</video> 
         </div>                
     </main>
+
+       <div class="panel">
+        <div class="panel1">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="purchase.html">Purchase</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div ="panel2">
+            <ul>
+                <li><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>New Bajaj Nav ed,jaipur<p>
+                Pincode: 302828</p></li>
+                <li><i class="fa-solid fa-envelope" style="color: #ffffff;"></i> skatergaming@gamil.com</li>
+                <li><i class="fa-solid fa-phone" style="color: #ffffff;"></i>+910000000000</li>                
+            </ul>
+        </div>
+       </div>
 
     <footer>
         <p>&copy; 2024 Skater Republic</p>
